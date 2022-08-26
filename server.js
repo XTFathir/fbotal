@@ -1,9 +1,9 @@
-import express from 'express'
-import { createServer } from 'http'
-import path from 'path'
-import { Socket } from 'socket.io'
-import { toBuffer } from 'qrcode'
-import fetch from 'node-fetch'
+let express = require('express')
+let { createServer } = require('http')
+let path = require('path')
+let { Socket } = require('socket.io') 
+let { toBuffer } = require('qrcode')
+let fetch = require('node-fetch')
 
 function connect(conn, PORT) {
     let app = global.app = express()
@@ -55,4 +55,4 @@ function keepAlive() {
 }
 
 
-export default connect
+module.exports = connect
