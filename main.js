@@ -110,7 +110,6 @@ if (!opts['test']) {
   }, 60 * 1000)
 }
 if (opts['server']) require('./server')(global.conn, PORT)
-if (opts['big-qr'] || opts['server']) conn.on('qr', qr => generate(qr, { small: false }))
 function clearTmp() {
   const tmp = [os.tmpdir(), path.join(__dirname, './tmp')]
   const filename = []
